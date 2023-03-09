@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            position: relative;
+            padding: 15px 60px;
+            color: #fff;
+            font-size: 30px;
+            background-color: #2874a6;
+            cursor: pointer;
+            text-transform: uppercase;
+            border: none;
+        }
+        button::before{
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            height: 40px;
+            width: 40px;
+            transition: .5s;
+        }
+        button:hover:before{
+            width: 100%;
+            height: 100%;
+            border: 5px solid #2874a6;
+            border-right: none;
+            border-bottom: none;
+        }
+        button::after{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            transition: .5s;
+            height: 40px;
+            width: 40px;
+        }
+        button:hover:after{
+            border: 5px solid #2874a6;
+            width: 100%;
+            height: 100%;
+            border-left: none;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <button>Register</button>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #27282c;
+        }
+        a{
+            position: relative;
+            background-color: #444;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1em;
+            letter-spacing: .1em;
+            padding: 10px 30px;
+            transition: .5s;
+        }
+        a:hover{
+            letter-spacing: .25em;
+            background-color: aqua;
+            box-shadow: 0 0 35px aqua;
+        }
+        a::before{
+            content: '';
+            position: absolute;
+            background-color: 27282c;
+            inset: 2px;
+        }
+        a span{
+            position: relative;
+            z-index: 1;
+        }
+        a i{
+            position: absolute;
+            inset: 0;
+            display: block;
+        }
+        a i::before{
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 100%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #27282c;
+            border: 2px solid aqua;
+            transition: .5s;
+        }
+        a:hover i::before{
+            left: 0;
+        }
+        a i::after{
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 100%;
+            transform: translateX(50%);
+            width: 10px;
+            height: 10px;
+            background-color: #27282c;
+            border: 2px solid aqua;
+            transition: .5s;
+        }
+        a:hover i::after{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="">
+        <span>Button</span>
+        <i></i>
+    </a>
+</body>
+</html>
