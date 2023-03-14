@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+         body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #27282c;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+        }
+        .btn{
+            position: relative;
+            min-width: 200px;
+            height: 70px;
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, .5);
+            padding-left: 40px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            border-top: .5px solid rgba(255, 255, 255, .35);
+            border-left: .5px solid rgba(255, 255, 255, .35);
+            transition: .5s;
+            overflow: hidden;
+        }
+        .btn:hover{
+            padding-left: 0;
+            padding-right: 40px;
+            color: rgba(255, 255, 255, 1);
+        }
+        .btn span{
+            position: absolute;
+            left: 5px;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background-color: aquamarine;
+            transition: .5s ease-in-out;
+        }
+        .btn:hover span{
+            left: calc(100% - 65px);
+        }
+        .btn::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            width: 80px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, .5);
+            transform: translateX(-170px) skewX(30deg);
+            transition: 1.5s ease-in-out;
+        }
+        .btn:hover::after{
+            transform: translateX(170px) skewX(30deg);
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="btn"> Swipe Next<span></span></a>
+</body>
+</html>
