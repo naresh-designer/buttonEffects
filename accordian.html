@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        body{
+           height: 100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background-color: #27282c;
+           font-family: 'Poppins', sans-serif;
+           color: #fff;
+           letter-spacing: 4px;
+       }
+       .accrodian{
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+       }
+        .contentBx{
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .contentBx .lable{
+            background-color: aqua;
+            color: #000;
+            padding: 5px 10px;
+         }
+        .contentBx.active .lable{
+            background-color: 000;
+            color:aqua;
+            padding: 5px 10px;
+         }
+         .contentBx .content{
+            padding: 5px 10px;
+            background-color: #fff;
+            color: aqua;
+            display: none;
+         }
+         .contentBx.active .content{
+            display: block;
+         }
+    </style>
+</head>
+<body>
+    <div class="accrodian">
+    <div class="contentBx">
+        <div class="lable">List One</div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore accusantium possimus magnam temporibus. Autem voluptates aut officia debitis, molestias ipsa, beatae odit neque similique fuga saepe? Sit cumque voluptate magni.</p>
+        </div>
+    </div>
+    <div class="contentBx">
+        <div class="lable">List Two</div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore accusantium possimus magnam temporibus. Autem voluptates aut officia debitis, molestias ipsa, beatae odit neque similique fuga saepe? Sit cumque voluptate magni.</p>
+        </div>
+    </div>
+    <div class="contentBx">
+        <div class="lable">List Three</div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore accusantium possimus magnam temporibus. Autem voluptates aut officia debitis, molestias ipsa, beatae odit neque similique fuga saepe? Sit cumque voluptate magni.</p>
+        </div>
+    </div>
+</div>
+<script>
+    const accordian = document.getElementsByClassName('contentBx');
+
+    for(i = 0; i < accordian.length; i++){
+        accordian[i].addEventListener('click', function(){
+            this.classList.toggle('active');
+        })
+    }
+</script>
+</body>
+</html>
