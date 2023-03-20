@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        body{
+           height: 100vh;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           align-items: center;
+           background-color: #27282c;
+           font-family: 'Poppins', sans-serif;
+           color: #fff;
+           letter-spacing: 4px;
+           gap: 20px;
+           padding: 0 30%;
+       }
+        a{
+            position: relative;
+            padding: 20px 40px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 1em;
+            transition: .5s;
+        }
+        a::before{
+            content: '';
+            position: absolute;
+            inset: 0 0px;
+            border-left: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transition: .8s;
+        }
+        a::after{
+            content: '';
+            position: absolute;
+            inset: 0px 0;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transition: 1s;
+        }
+        a.btn1:hover:before{
+            inset: 16px 8px;
+        }
+        a.btn1:hover:after{
+            inset: 8px 16px;
+        }
+        a.btn2:hover:before{
+            inset: 0px 8px;
+        }
+        a.btn2:hover:after{
+            inset: 8px 0;
+        }
+        a.btn3:hover:before{
+            inset: 0px 0px;
+            transform: rotateY(180deg);
+            border-left: 2px solid blue;
+            border-right: 2px solid blue;
+        }
+        a.btn3:hover:after{
+            inset: 0px 0;
+            transform: rotateY(180deg);
+            border-top: 2px solid blue;
+            border-bottom: 2px solid blue;
+        }
+        a.btn4:hover:before{
+            inset: 0px 2px;
+            transform: skewY(15deg);
+            border-left: 2px solid blue;
+            border-right: 2px solid blue;
+        }
+        a.btn4:hover:after{
+            inset: 2px 0;
+            transform: skewX(15deg);
+            border-top: 2px solid blue;
+            border-bottom: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="btn1">Button</a>
+    <a href="" class="btn2">Button</a>
+    <a href="" class="btn3">Button</a>
+    <a href="" class="btn4">Button</a>
+    <a href="" class="btn5">Button</a>
+</body>
+</html>
